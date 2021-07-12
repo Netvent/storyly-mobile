@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".use_cases.ShowActivity">
+
+    <LinearLayout
+        android:id="@+id/storyly_view_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#00E0E4"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#242450"/>
+
+        <com.appsamurai.storyly.StorylyView
+            android:id="@+id/storyly_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#BDBDCB"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FFCB00"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

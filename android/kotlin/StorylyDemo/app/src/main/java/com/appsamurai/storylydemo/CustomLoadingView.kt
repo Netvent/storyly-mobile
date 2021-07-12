@@ -5,10 +5,11 @@ import android.content.Context
 import android.util.Log
 import android.view.View
 import com.appsamurai.storyly.external.StorylyLoadingView
-import kotlinx.android.synthetic.main.custom_loading_view.view.*
+import com.appsamurai.storylydemo.databinding.CustomLoadingViewBinding
 
 @SuppressLint("ViewConstructor")
 class CustomLoadingView(view: View, context: Context) : StorylyLoadingView(context) {
+    private val binding: CustomLoadingViewBinding = CustomLoadingViewBinding.bind(view)
 
     init {
         addView(view)
@@ -16,11 +17,11 @@ class CustomLoadingView(view: View, context: Context) : StorylyLoadingView(conte
 
     override fun show() {
         Log.d("[Storyly]", "LoadingView:show")
-        this.external_loading.visibility = View.VISIBLE
+        binding.externalLoading.visibility = View.VISIBLE
     }
 
     override fun hide() {
         Log.d("[Storyly]", "LoadingView:hide")
-        this.external_loading.visibility = View.GONE
+        binding.externalLoading.visibility = View.GONE
     }
 }

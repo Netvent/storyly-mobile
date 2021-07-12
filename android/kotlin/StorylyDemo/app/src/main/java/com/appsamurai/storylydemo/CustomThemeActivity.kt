@@ -4,17 +4,21 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.appsamurai.storyly.StorylyInit
-import kotlinx.android.synthetic.main.activity_custom_theme.*
+import com.appsamurai.storylydemo.databinding.ActivityCustomThemeBinding
 
 class CustomThemeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityCustomThemeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_custom_theme)
+        binding = ActivityCustomThemeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        storyly_view_default.storylyInit = StorylyInit(STORYLY_INSTANCE_TOKEN)
+        val STORYLY_INSTANCE_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjc2MCwiYXBwX2lkIjo0MDUsImluc19pZCI6NDA0fQ.1AkqOy_lsiownTBNhVOUKc91uc9fDcAxfQZtpm3nj40"
 
+        binding.storylyViewDefault.storylyInit = StorylyInit(STORYLY_INSTANCE_TOKEN)
 
-        storyly_custom_theme.storylyInit = StorylyInit(STORYLY_INSTANCE_TOKEN)
+        binding.storylyCustomTheme.storylyInit = StorylyInit(STORYLY_INSTANCE_TOKEN)
 
         // storyly_custom_theme.setStoryGroupTextColor(Color.parseColor("#f03932"))
 

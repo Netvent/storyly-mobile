@@ -4,17 +4,20 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.appsamurai.storyly.*
 import com.appsamurai.storyly.analytics.StorylyEvent
-import kotlinx.android.synthetic.main.activity_event_handling.*
+import com.appsamurai.storylydemo.databinding.ActivityEventHandlingBinding
 
 class EventHandlingActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityEventHandlingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_event_handling)
+        binding = ActivityEventHandlingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        storyly_view.storylyInit =
-            StorylyInit(STORYLY_INSTANCE_TOKEN)
-        storyly_view.storylyListener = object : StorylyListener {
+        val STORYLY_INSTANCE_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjc2MCwiYXBwX2lkIjo0MDUsImluc19pZCI6NDA0fQ.1AkqOy_lsiownTBNhVOUKc91uc9fDcAxfQZtpm3nj40"
+
+        binding.storylyView.storylyInit = StorylyInit(STORYLY_INSTANCE_TOKEN)
+        binding.storylyView.storylyListener = object : StorylyListener {
             override fun storylyLoaded(
                 storylyView: StorylyView,
                 storyGroupList: List<StoryGroup>

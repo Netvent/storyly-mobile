@@ -18,6 +18,7 @@ public class CustomSizeActivity extends AppCompatActivity {
 
         LinearLayout storylyViewHolder = findViewById(R.id.storyly_view_holder);
 
+        String STORYLY_INSTANCE_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjc2MCwiYXBwX2lkIjo0MDUsImluc19pZCI6NDA0fQ.1AkqOy_lsiownTBNhVOUKc91uc9fDcAxfQZtpm3nj40";
 
         StorylyView storyly_view_custom_xlarge = findViewById(R.id.storyly_view_custom_xlarge);
         storyly_view_custom_xlarge.setStorylyInit(new StorylyInit(STORYLY_INSTANCE_TOKEN));

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RId-Ou-PXg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ShowStoryly-->
+        <scene sceneID="ueI-qg-6it">
+            <objects>
+                <viewController title="ShowStoryly" id="RId-Ou-PXg" userLabel="ShowStoryly" customClass="ShowStorylyController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eL-Jz-7L4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="top" ambiguous="YES" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="utv-uR-Myl" userLabel="StorylyHolder">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jIN-Tm-yKT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jIN-Tm-yKT" firstAttribute="trailing" secondItem="utv-uR-Myl" secondAttribute="trailing" id="1cL-V4-qyS"/>
+                            <constraint firstItem="utv-uR-Myl" firstAttribute="leading" secondItem="jIN-Tm-yKT" secondAttribute="leading" id="cG9-EI-dpV"/>
+                            <constraint firstItem="utv-uR-Myl" firstAttribute="top" secondItem="jIN-Tm-yKT" secondAttribute="top" id="tiB-dl-Zm0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="storylyViewHolder" destination="utv-uR-Myl" id="dbz-1A-XDP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyx-kV-GtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365" y="-29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

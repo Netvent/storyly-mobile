@@ -1,24 +1,12 @@
 package com.appsamurai.storylydemo;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.LinearLayout;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.appsamurai.storyly.Story;
-import com.appsamurai.storyly.StoryComponent;
-import com.appsamurai.storyly.StoryEmojiComponent;
-import com.appsamurai.storyly.StoryGroup;
-import com.appsamurai.storyly.StoryPollComponent;
-import com.appsamurai.storyly.StoryQuizComponent;
 import com.appsamurai.storyly.StorylyInit;
-import com.appsamurai.storyly.StorylyListener;
 import com.appsamurai.storyly.StorylyView;
-import com.appsamurai.storyly.analytics.StorylyEvent;
-
-import java.util.List;
 
 public class BasicActivity extends AppCompatActivity {
 
@@ -28,6 +16,8 @@ public class BasicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         LinearLayout storylyViewHolder = findViewById(R.id.storyly_view_holder);
+
+        String STORYLY_INSTANCE_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjc2MCwiYXBwX2lkIjo0MDUsImluc19pZCI6NDA0fQ.1AkqOy_lsiownTBNhVOUKc91uc9fDcAxfQZtpm3nj40";
 
         StorylyView storyly_view = findViewById(R.id.storyly_view);
         storyly_view.setStorylyInit(new StorylyInit(STORYLY_INSTANCE_TOKEN));

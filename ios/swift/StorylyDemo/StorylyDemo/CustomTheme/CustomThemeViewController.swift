@@ -2,7 +2,7 @@
 //  CustomThemeViewController.swift
 //  StorylyDemo
 //
-//  Created by Haldun  Fadillioglu on 2.02.2021.
+//  Created by Haldun Fadillioglu on 2.02.2021.
 //  Copyright © 2021 App Samurai Inc. All rights reserved.
 //
 

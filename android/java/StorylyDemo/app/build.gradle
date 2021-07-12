@@ -20,11 +20,9 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation "androidx.recyclerview:recyclerview:1.2.0-beta01"
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
 
-    implementation 'com.google.android.gms:play-services-ads:19.6.0'
-
-    implementation 'com.appsamurai.storyly:storyly:1.9.0'
+    implementation 'com.appsamurai.storyly:storyly:1.11.2'
 }

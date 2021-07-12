@@ -13,6 +13,7 @@ public class CustomThemeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_theme);
 
+        String STORYLY_INSTANCE_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjc2MCwiYXBwX2lkIjo0MDUsImluc19pZCI6NDA0fQ.1AkqOy_lsiownTBNhVOUKc91uc9fDcAxfQZtpm3nj40";
 
         StorylyView storyly_view_default = findViewById(R.id.storyly_view_default);
         storyly_view_default.setStorylyInit(new StorylyInit(STORYLY_INSTANCE_TOKEN));

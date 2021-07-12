@@ -4,18 +4,22 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.appsamurai.storyly.StorylyInit
 import com.appsamurai.storyly.StorylyView
-import kotlinx.android.synthetic.main.activity_main.*
+import com.appsamurai.storylydemo.databinding.ActivityMainBinding
 
 class BasicActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        storyly_view.storylyInit = StorylyInit(STORYLY_INSTANCE_TOKEN)
+        val STORYLY_INSTANCE_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjc2MCwiYXBwX2lkIjo0MDUsImluc19pZCI6NDA0fQ.1AkqOy_lsiownTBNhVOUKc91uc9fDcAxfQZtpm3nj40"
+
+        binding.storylyView.storylyInit = StorylyInit(STORYLY_INSTANCE_TOKEN)
 
         val storylyView = StorylyView(this)
         storylyView.storylyInit = StorylyInit(STORYLY_INSTANCE_TOKEN)
-        storyly_view_holder.addView(storylyView)
+        binding.storylyViewHolder.addView(storylyView)
     }
 }

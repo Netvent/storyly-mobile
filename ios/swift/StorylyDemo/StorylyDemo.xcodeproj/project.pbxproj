@@ -19,6 +19,10 @@
 		A16DA83E233B90E3000514FA /* Basic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16DA83C233B90E3000514FA /* Basic.storyboard */; };
 		A16DA840233B90E5000514FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16DA83F233B90E5000514FA /* Assets.xcassets */; };
 		A16DA843233B90E5000514FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16DA841233B90E5000514FA /* LaunchScreen.storyboard */; };
+		DC620EF4263FFDFB00CE8688 /* ShowStorylyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC620EF3263FFDFB00CE8688 /* ShowStorylyViewController.swift */; };
+		DC941B6E2645422800A2042B /* HideStoryly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC941B6D2645422800A2042B /* HideStoryly.storyboard */; };
+		DC941B712645428400A2042B /* ShowStoryly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC941B702645428400A2042B /* ShowStoryly.storyboard */; };
+		DCD96E6526415285001E823C /* HideStorylyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD96E6426415285001E823C /* HideStorylyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		A16DA83F233B90E5000514FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A16DA842233B90E5000514FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A16DA844233B90E5000514FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC620EF3263FFDFB00CE8688 /* ShowStorylyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStorylyViewController.swift; sourceTree = "<group>"; };
+		DC941B6D2645422800A2042B /* HideStoryly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HideStoryly.storyboard; sourceTree = "<group>"; };
+		DC941B702645428400A2042B /* ShowStoryly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowStoryly.storyboard; sourceTree = "<group>"; };
+		DCD96E6426415285001E823C /* HideStorylyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideStorylyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,18 +108,62 @@
 		A16DA835233B90E3000514FA /* StorylyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DC620EE4263FFCBE00CE8688 /* UseCases */,
+				DC620EE3263FFCAE00CE8688 /* CustomTheme */,
+				DC620EE2263FFC9800CE8688 /* CustomSize */,
 				41501BEB25D1B16F00928E7C /* Basic */,
 				41501BF125D1B30100928E7C /* EventHandling */,
-				41501BE425D18AA600928E7C /* CustomSize.storyboard */,
-				41501BE125D18AA600928E7C /* CustomSizeViewController.swift */,
-				41501BE325D18AA600928E7C /* CustomTheme.storyboard */,
-				41501BE225D18AA600928E7C /* CustomThemeViewController.swift */,
 				A16DA836233B90E3000514FA /* AppDelegate.swift */,
 				A16DA83F233B90E5000514FA /* Assets.xcassets */,
 				A16DA841233B90E5000514FA /* LaunchScreen.storyboard */,
 				A16DA844233B90E5000514FA /* Info.plist */,
 			);
 			path = StorylyDemo;
+			sourceTree = "<group>";
+		};
+		DC620EE2263FFC9800CE8688 /* CustomSize */ = {
+			isa = PBXGroup;
+			children = (
+				41501BE425D18AA600928E7C /* CustomSize.storyboard */,
+				41501BE125D18AA600928E7C /* CustomSizeViewController.swift */,
+			);
+			path = CustomSize;
+			sourceTree = "<group>";
+		};
+		DC620EE3263FFCAE00CE8688 /* CustomTheme */ = {
+			isa = PBXGroup;
+			children = (
+				41501BE325D18AA600928E7C /* CustomTheme.storyboard */,
+				41501BE225D18AA600928E7C /* CustomThemeViewController.swift */,
+			);
+			path = CustomTheme;
+			sourceTree = "<group>";
+		};
+		DC620EE4263FFCBE00CE8688 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DC620F002640245400CE8688 /* HideStoryly */,
+				DC620EF2263FFDDD00CE8688 /* ShowStoryly */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DC620EF2263FFDDD00CE8688 /* ShowStoryly */ = {
+			isa = PBXGroup;
+			children = (
+				DC620EF3263FFDFB00CE8688 /* ShowStorylyViewController.swift */,
+				DC941B702645428400A2042B /* ShowStoryly.storyboard */,
+			);
+			path = ShowStoryly;
+			sourceTree = "<group>";
+		};
+		DC620F002640245400CE8688 /* HideStoryly */ = {
+			isa = PBXGroup;
+			children = (
+				DCD96E6426415285001E823C /* HideStorylyViewController.swift */,
+				DC941B6D2645422800A2042B /* HideStoryly.storyboard */,
+			);
+			path = HideStoryly;
 			sourceTree = "<group>";
 		};
 		FCDFECCC10AD456918056776 /* Frameworks */ = {
@@ -184,7 +236,9 @@
 			files = (
 				A16DA843233B90E5000514FA /* LaunchScreen.storyboard in Resources */,
 				A16DA840233B90E5000514FA /* Assets.xcassets in Resources */,
+				DC941B6E2645422800A2042B /* HideStoryly.storyboard in Resources */,
 				A16DA83E233B90E3000514FA /* Basic.storyboard in Resources */,
+				DC941B712645428400A2042B /* ShowStoryly.storyboard in Resources */,
 				41501BE825D18AA700928E7C /* CustomSize.storyboard in Resources */,
 				41501BEF25D1B2FB00928E7C /* EventHandling.storyboard in Resources */,
 				41501BE725D18AA700928E7C /* CustomTheme.storyboard in Resources */,
@@ -242,9 +296,11 @@
 			files = (
 				A16DA83B233B90E3000514FA /* BasicViewController.swift in Sources */,
 				41501BDF25D18A2500928E7C /* EventHandlingViewController.swift in Sources */,
+				DC620EF4263FFDFB00CE8688 /* ShowStorylyViewController.swift in Sources */,
 				41501BE525D18AA700928E7C /* CustomSizeViewController.swift in Sources */,
 				41501BE625D18AA700928E7C /* CustomThemeViewController.swift in Sources */,
 				A16DA837233B90E3000514FA /* AppDelegate.swift in Sources */,
+				DCD96E6526415285001E823C /* HideStorylyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

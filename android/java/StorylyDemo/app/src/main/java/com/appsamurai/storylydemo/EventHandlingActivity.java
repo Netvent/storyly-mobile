@@ -23,6 +23,9 @@ public class EventHandlingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event_handling);
 
         StorylyView storyly_view = findViewById(R.id.storyly_view);
+
+        String STORYLY_INSTANCE_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjc2MCwiYXBwX2lkIjo0MDUsImluc19pZCI6NDA0fQ.1AkqOy_lsiownTBNhVOUKc91uc9fDcAxfQZtpm3nj40";
+
         storyly_view.setStorylyInit(new StorylyInit(STORYLY_INSTANCE_TOKEN));
         storyly_view.setStorylyListener(new StorylyListener() {
             @Override

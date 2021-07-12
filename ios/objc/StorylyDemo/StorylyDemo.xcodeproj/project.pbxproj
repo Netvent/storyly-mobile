@@ -18,6 +18,10 @@
 		A1752CC723FD0E45000CCB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1752CC623FD0E45000CCB33 /* Assets.xcassets */; };
 		A1752CCA23FD0E45000CCB33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1752CC823FD0E45000CCB33 /* LaunchScreen.storyboard */; };
 		A1752CCD23FD0E45000CCB33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1752CCC23FD0E45000CCB33 /* main.m */; };
+		DCC2C1002643D4A300854DF7 /* ShowStorylyController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC2C0FF2643D4A300854DF7 /* ShowStorylyController.m */; };
+		DCC2C1052643D4C100854DF7 /* HideStorylyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC2C1042643D4C100854DF7 /* HideStorylyViewController.m */; };
+		DCC2C1172644006700854DF7 /* ShowStoryly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC2C1162644006700854DF7 /* ShowStoryly.storyboard */; };
+		DCC2C11A264401B500854DF7 /* HideStoryly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC2C119264401B500854DF7 /* HideStoryly.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,12 @@
 		A1752CC923FD0E45000CCB33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1752CCB23FD0E45000CCB33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1752CCC23FD0E45000CCB33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCC2C0FE2643D4A300854DF7 /* ShowStorylyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowStorylyController.h; sourceTree = "<group>"; };
+		DCC2C0FF2643D4A300854DF7 /* ShowStorylyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowStorylyController.m; sourceTree = "<group>"; };
+		DCC2C1032643D4C100854DF7 /* HideStorylyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HideStorylyViewController.h; sourceTree = "<group>"; };
+		DCC2C1042643D4C100854DF7 /* HideStorylyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideStorylyViewController.m; sourceTree = "<group>"; };
+		DCC2C1162644006700854DF7 /* ShowStoryly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowStoryly.storyboard; sourceTree = "<group>"; };
+		DCC2C119264401B500854DF7 /* HideStoryly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HideStoryly.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +113,10 @@
 		A1752CB923FD0E43000CCB33 /* StorylyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DCC2C0FB2643D46B00854DF7 /* UseCases */,
+				DCC2C0FA2643D45400854DF7 /* CustomSize */,
 				41BC5D5625D1BF3A002876EF /* Basic */,
 				41BC5D5E25D1BF6E002876EF /* EventHandling */,
-				41BC5D5025D1BF34002876EF /* CustomSize.storyboard */,
-				41BC5D5125D1BF35002876EF /* CustomSizeViewController.h */,
-				41BC5D5225D1BF35002876EF /* CustomSizeViewController.m */,
 				A1752CBA23FD0E43000CCB33 /* AppDelegate.h */,
 				A1752CBB23FD0E43000CCB33 /* AppDelegate.m */,
 				A1752CC623FD0E45000CCB33 /* Assets.xcassets */,
@@ -125,6 +134,45 @@
 				1D0A85522E993DBED89E899C /* Pods-StorylyDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DCC2C0FA2643D45400854DF7 /* CustomSize */ = {
+			isa = PBXGroup;
+			children = (
+				41BC5D5025D1BF34002876EF /* CustomSize.storyboard */,
+				41BC5D5125D1BF35002876EF /* CustomSizeViewController.h */,
+				41BC5D5225D1BF35002876EF /* CustomSizeViewController.m */,
+			);
+			path = CustomSize;
+			sourceTree = "<group>";
+		};
+		DCC2C0FB2643D46B00854DF7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DCC2C0FD2643D48A00854DF7 /* ShowStoryly */,
+				DCC2C0FC2643D47E00854DF7 /* HideStoryly */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DCC2C0FC2643D47E00854DF7 /* HideStoryly */ = {
+			isa = PBXGroup;
+			children = (
+				DCC2C1032643D4C100854DF7 /* HideStorylyViewController.h */,
+				DCC2C1042643D4C100854DF7 /* HideStorylyViewController.m */,
+				DCC2C119264401B500854DF7 /* HideStoryly.storyboard */,
+			);
+			path = HideStoryly;
+			sourceTree = "<group>";
+		};
+		DCC2C0FD2643D48A00854DF7 /* ShowStoryly */ = {
+			isa = PBXGroup;
+			children = (
+				DCC2C0FE2643D4A300854DF7 /* ShowStorylyController.h */,
+				DCC2C0FF2643D4A300854DF7 /* ShowStorylyController.m */,
+				DCC2C1162644006700854DF7 /* ShowStoryly.storyboard */,
+			);
+			path = ShowStoryly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,8 +236,10 @@
 			files = (
 				A1752CCA23FD0E45000CCB33 /* LaunchScreen.storyboard in Resources */,
 				A1752CC723FD0E45000CCB33 /* Assets.xcassets in Resources */,
+				DCC2C1172644006700854DF7 /* ShowStoryly.storyboard in Resources */,
 				41BC5D5325D1BF35002876EF /* CustomSize.storyboard in Resources */,
 				41BC5D5825D1BF4F002876EF /* EventHandling.storyboard in Resources */,
+				DCC2C11A264401B500854DF7 /* HideStoryly.storyboard in Resources */,
 				A1752CC523FD0E43000CCB33 /* Basic.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,7 +297,9 @@
 				A1752CBC23FD0E43000CCB33 /* AppDelegate.m in Sources */,
 				41BC5D5425D1BF35002876EF /* CustomSizeViewController.m in Sources */,
 				41BC5D5C25D1BF69002876EF /* EventHandlingViewController.m in Sources */,
+				DCC2C1052643D4C100854DF7 /* HideStorylyViewController.m in Sources */,
 				A1752CCD23FD0E45000CCB33 /* main.m in Sources */,
+				DCC2C1002643D4A300854DF7 /* ShowStorylyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
