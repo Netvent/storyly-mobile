@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:storyly_demo/update_state_example.dart';
 import 'package:storyly_flutter/storyly_flutter.dart';
 
 import 'scroll_example.dart';
@@ -85,6 +86,15 @@ class _HomePageState extends State<HomePage> {
                 );
               },
               child: Text("Scroll Example"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UpdateStateExample()),
+                );
+              },
+              child: Text("Update State Example"),
             ),
           ],
         ),
