@@ -1,18 +1,23 @@
-import React from 'react';
+import * as React from 'react';
 import {
   SafeAreaView,
   Animated,
   StatusBar,
   Button,
-  Easing
+  Easing,
+  View,
+  Text,
 } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import { Storyly } from 'storyly-react-native';
 
 const HEIGHT = 100;
 const PADDING_TOP = 10;
 
-const App = () => {
+function HomeScreen({navigation}) {
   const height = new Animated.Value(HEIGHT);
   const paddingTop = new Animated.Value(PADDING_TOP);
 
@@ -65,9 +70,55 @@ const App = () => {
             storylyId="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjc2MCwiYXBwX2lkIjo0MDUsImluc19pZCI6NDA0fQ.1AkqOy_lsiownTBNhVOUKc91uc9fDcAxfQZtpm3nj40"
           />
         </Animated.View>
+        <Button
+          onPress={() => navigation.navigate('Modal1')}
+          title="Open Modal 1"
+        />
       </SafeAreaView>
     </>
   );
-};
+}
+
+function ModalScreen1({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 30, padding:15 }}>This is a modal 1!</Text>
+      <Button 
+        onPress={() => navigation.goBack()} 
+        title="Dismiss"
+      />
+      <Button
+        onPress={() => navigation.navigate('Modal2')}
+        title="Open Modal 2"
+      />
+    </View>
+  );
+}
+
+function ModalScreen2({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 30, padding: 15 }}>This is a modal 2!</Text>
+      <Button
+        onPress={() => navigation.goBack()}
+        title="Dismiss"
+      />
+    </View>
+  );
+}
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Modal1" component={ModalScreen1} />
+        <Stack.Screen name="Modal2" component={ModalScreen2} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 export default App;
