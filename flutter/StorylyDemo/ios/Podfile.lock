@@ -1,29 +1,49 @@
 PODS:
   - Flutter (1.0.0)
-  - Storyly (1.32.3)
-  - storyly_flutter (1.30.0):
+  - Google-Mobile-Ads-SDK (11.2.0):
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleUserMessagingPlatform (2.4.0)
+  - Storyly (3.0.1)
+  - storyly_flutter (3.0.1):
     - Flutter
-    - Storyly (~> 1.32.0)
+    - Storyly (= 3.0.1)
+  - storyly_monetization_flutter (3.0.0):
+    - Flutter
+    - storyly_flutter (~> 3.0)
+    - StorylyMonetization (~> 3.0)
+  - StorylyMonetization (3.0.1):
+    - Google-Mobile-Ads-SDK (~> 11.2.0)
+    - Storyly (~> 3.0)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - storyly_flutter (from `.symlinks/plugins/storyly_flutter/ios`)
+  - storyly_monetization_flutter (from `.symlinks/plugins/storyly_monetization_flutter/ios`)
 
 SPEC REPOS:
   trunk:
+    - Google-Mobile-Ads-SDK
+    - GoogleUserMessagingPlatform
     - Storyly
+    - StorylyMonetization
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
   storyly_flutter:
     :path: ".symlinks/plugins/storyly_flutter/ios"
+  storyly_monetization_flutter:
+    :path: ".symlinks/plugins/storyly_monetization_flutter/ios"
 
 SPEC CHECKSUMS:
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  Storyly: 9ee1b0635cbc9adfb77b95252fc547874c446be7
-  storyly_flutter: cf7e7fee47259304e14d44c962b8a4ffae7f87af
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  Google-Mobile-Ads-SDK: 5a6d005a6cb5b5e8f4c7b69ca05cdea79c181139
+  GoogleUserMessagingPlatform: f131fa7978d2ba88d7426702b057c2cc318e6595
+  Storyly: 79f8cfe3c8d8cee1fd903d27ed91b15fa3a4dd2a
+  storyly_flutter: 4cf310af3ebc59713764aee23b3ce31bd50fc16a
+  storyly_monetization_flutter: 068725109836148b2e5e6475207fdbd6558fbe80
+  StorylyMonetization: 5585676b9138ad71de4e5b89221895296291864e
 
-PODFILE CHECKSUM: cc1f88378b4bfcf93a6ce00d2c587857c6008d3b
+PODFILE CHECKSUM: b58ac70cf53b87a63f97eff8ce3439610d14db80
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2

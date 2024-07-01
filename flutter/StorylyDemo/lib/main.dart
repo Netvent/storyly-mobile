@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:storyly_demo/constants.dart';
 import 'package:storyly_demo/multi_screen_example.dart';
 import 'package:storyly_flutter/storyly_flutter.dart';
+import 'package:storyly_monetization_flutter/storyly_monetization_flutter.dart';
 
 import 'scroll_example.dart';
 
@@ -42,6 +43,14 @@ class _HomePageState extends State<HomePage> {
 
   void onStorylyViewCreated(StorylyViewController storylyViewController) {
     this.storylyViewController = storylyViewController;
+    StorylyMonetization.setAdViewProvider(
+        storylyViewController.getViewId(),
+        AdViewProvider(
+            adMobAdUnitId: "ca-app-pub-3940256099942544/2247696110",
+            adMobAdExtras: {
+              "npa": "1",
+              "aa": {"test": "a"}
+            }));
   }
 
   @override
@@ -59,7 +68,7 @@ class _HomePageState extends State<HomePage> {
               child: StorylyView(
                 onStorylyViewCreated: onStorylyViewCreated,
                 androidParam: StorylyParam()..storylyId = Constants.storylyId,
-                iosParam: StorylyParam()..storylyId = Constants.storylyId,
+                iosParam: StorylyParam()..storylyId = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfaWQiOjU1NiwiYXBwX2lkIjoxMzg5LCJpbnNfaWQiOjE5MDE0fQ.xFHBIGX6vaP0QGuW88W3y5T0aYKl86iCHvZ2iiF1k44",
                 storylyLoaded: (storyGroups, dataSource) {
                   debugPrint(
                     "storylyLoaded -> storyGroups: ${storyGroups.length}",

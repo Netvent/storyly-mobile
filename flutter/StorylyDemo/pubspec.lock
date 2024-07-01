@@ -164,10 +164,18 @@ packages:
     dependency: "direct main"
     description:
       name: storyly_flutter
-      sha256: "27e6a664878c56a7bd3f932a74bad0cb830c765ecbef4498ae9b3c895d3ce447"
+      sha256: "120ca1562d223c6fb0d14d1e9481bd1728bac9f2547791b995cbe4eba22f0f24"
       url: "https://pub.dev"
     source: hosted
-    version: "2.16.1"
+    version: "3.0.1"
+  storyly_monetization_flutter:
+    dependency: "direct main"
+    description:
+      name: storyly_monetization_flutter
+      sha256: a041ab26e017c660876864678d11a13a49baf236034cc5aa4944abe294bc4112
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   stream_channel:
     dependency: transitive
     description:
